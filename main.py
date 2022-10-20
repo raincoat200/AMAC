@@ -21,7 +21,20 @@ def elem_play(var):
         browser.find_element_by_id("class_float").find_element_by_class_name("btn-close").click()
     except:
         pass
-
+def info():
+    while True:
+        try:
+            browser.find_element(By.XPATH,'//div[(@class="dw_stepbox" or @class="guide_box") and @style="display: block;"]/span').click()
+        except:
+            break
+    try:
+        data = browser.find_elements(By.XPATH, '//div[@class="guide_box"]/span')
+        for i in data:
+            if i.is_displayed():
+                i.click()
+    except:
+        pass
+    
 def doing():
     # CURRENT ITEMS
     try:
