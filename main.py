@@ -21,6 +21,7 @@ def elem_play(var):
         browser.find_element_by_id("class_float").find_element_by_class_name("btn-close").click()
     except:
         pass
+
 def info():
     while True:
         try:
